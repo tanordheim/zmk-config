@@ -423,8 +423,8 @@ path.combo {
 <text x="58.0" y="1036.0" class="trans tap">▽</text>
 <rect rx="6.0" ry="6.0" x="88.0" y="1003.0" width="52.0" height="52.0" class="trans key"/>
 <text x="114.0" y="1029.0" class="trans tap">▽</text>
-<rect rx="6.0" ry="6.0" x="144.0" y="989.0" width="52.0" height="52.0" class="trans key"/>
-<text x="170.0" y="1015.0" class="trans tap">▽</text>
+<rect rx="6.0" ry="6.0" x="144.0" y="989.0" width="52.0" height="52.0" class="key"/>
+<text x="170.0" y="1015.0" class="tap">PP</text>
 <rect rx="6.0" ry="6.0" x="200.0" y="982.0" width="52.0" height="52.0" class="key"/>
 <text x="226.0" y="1008.0" class="tap">
 <tspan x="226.0" dy="-0.6em">VOL</tspan><tspan x="226.0" dy="1.2em">UP</tspan></text>
@@ -455,8 +455,8 @@ path.combo {
 <text x="198.0" y="1071.0" class="trans tap">▽</text>
 <rect rx="6.0" ry="6.0" x="228.0" y="1046.4" width="52.0" height="52.0" class="trans key"/>
 <text x="254.0" y="1072.4" class="trans tap">▽</text>
-<rect rx="6.0" ry="6.0" x="284.0" y="1052.0" width="52.0" height="52.0" class="key"/>
-<text x="310.0" y="1078.0" class="tap">PP</text>
+<rect rx="6.0" ry="6.0" x="284.0" y="1052.0" width="52.0" height="52.0" class="trans key"/>
+<text x="310.0" y="1078.0" class="trans tap">▽</text>
 <rect rx="6.0" ry="6.0" x="368.0" y="1052.0" width="52.0" height="80.0" class="trans key"/>
 <text x="394.0" y="1092.0" class="trans tap">▽</text>
 <rect rx="6.0" ry="6.0" x="564.0" y="1052.0" width="52.0" height="80.0" class="trans key"/>

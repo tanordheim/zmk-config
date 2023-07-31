@@ -62,14 +62,14 @@
 // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-// |       |     |     | VUP  | VDWN | MUTE |        |  |       |  +   |  -    |  _    |  {   |   }   |  "|"  |
-//               |     |      |      |  PP  |        |  |       |      |       |       |      |
+// |       |     |  PP | VUP  | VDWN | MUTE |        |  |       |  +   |  -    |  _    |  {   |   }   |  "|"  |
+//               |     |      |      |      |        |  |       |      |       |       |      |
       bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                    &trans    &trans    &trans    &trans    &trans    &trans
 &trans     &trans       &trans       &trans       &trans       &trans                          &trans    &trans    &trans    &trans    &trans    &trans
 &kp GRAVE  &kp EXCL     &kp AT       &kp HASH     &kp DOLLAR   &kp PRCNT                       &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp TILDE
-&trans     &trans       &trans       &kp K_VOL_UP &kp K_VOL_DN &kp K_MUTE      &trans  &trans  &kp PLUS  &kp MINUS &kp UNDER &kp LBRC  &kp RBRC  &kp PIPE
-                        &trans       &trans       &trans       &kp K_PP        &trans  &trans  &trans    &trans    &trans    &trans
+&trans     &trans       &kp K_PP     &kp K_VOL_UP &kp K_VOL_DN &kp K_MUTE      &trans  &trans  &kp PLUS  &kp MINUS &kp UNDER &kp LBRC  &kp RBRC  &kp PIPE
+                        &trans       &trans       &trans       &trans          &trans  &trans  &trans    &trans    &trans    &trans
       >;
 
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
