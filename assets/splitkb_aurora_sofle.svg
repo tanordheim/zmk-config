@@ -210,11 +210,11 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="648.0" y="296.0" width="52.0" height="52.0" class="key"/>
 <text x="674.0" y="322.0" class="tap">symbols</text>
 <rect rx="6.0" ry="6.0" x="704.0" y="290.40000000000003" width="52.0" height="52.0" class="key"/>
-<text x="730.0" y="316.40000000000003" class="tap">RCTRL</text>
+<text x="730.0" y="316.40000000000003" class="tap">BSPC</text>
 <rect rx="6.0" ry="6.0" x="760.0" y="289.0" width="52.0" height="52.0" class="key"/>
-<text x="786.0" y="315.0" class="tap">RALT</text>
+<text x="786.0" y="315.0" class="tap">RCTRL</text>
 <rect rx="6.0" ry="6.0" x="816.0" y="303.0" width="52.0" height="52.0" class="key"/>
-<text x="842.0" y="329.0" class="tap">GUI</text>
+<text x="842.0" y="329.0" class="tap">RGUI</text>
 </g>
 <g class="layer-symbols">
 <text x="30.0" y="406.0" class="label">symbols:</text>
