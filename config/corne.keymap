@@ -44,6 +44,11 @@
   chain-length = <27>;
 };
 
+// nice!view needs some tweaks to work with leds enabled
+&nice_view_spi {
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+};
+
 // fn layer shortcuts
 #define FN_RGB_TOG &rgb_ug RGB_TOG
 #define FN_RGB_HUI &rgb_ug RGB_HUI
