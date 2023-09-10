@@ -39,6 +39,11 @@
   quick-tap-ms = <QUICK_TAP_MS>;
 };
 
+// light up all leds
+&led_strip {
+  chain-length = <27>;
+};
+
 // fn layer shortcuts
 #define FN_RGB_TOG &rgb_ug RGB_TOG
 #define FN_RGB_HUI &rgb_ug RGB_HUI
