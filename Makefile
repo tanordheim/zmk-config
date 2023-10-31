@@ -1,6 +1,11 @@
 .PHONY: keymap-images
 keymap-images: corne-keymap-image sofle-keymap-image kyria-keymap-image
 
+.PHONY: clean
+clean:
+	rm -rf ~/Code/zmk/build/left/*
+	rm -rf ~/Code/zmk/build/right/*
+
 .PHONY: corne-keymap-image
 corne-keymap-image:
 	keymap --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/corne.keymap > assets/corne.keymap.yaml
@@ -23,7 +28,7 @@ zmk-local-setup:
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" zmkfirmware/zmk-build-arm:stable west zephyr-export
 
 .PHONY: corne
-corne: corne-left corne-right
+corne: clean corne-left corne-right
 
 .PHONY: corne-left
 corne-left:
@@ -33,8 +38,19 @@ corne-left:
 corne-right:
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=corne_right -DZMK_CONFIG="/my-zmk-config/config"
 
+.PHONY: sofle
+sofle: clean sofle-left sofle-right
+
+.PHONY: sofle-left
+sofle-left:
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/left -- -DSHIELD=splitkb_aurora_sofle_left -DZMK_CONFIG="/my-zmk-config/config"
+
+.PHONY: sofle-right
+sofle-right:
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=splitkb_aurora_sofle_right -DZMK_CONFIG="/my-zmk-config/config"
+
 .PHONY: kyria
-kyria: kyria-left kyria-right
+kyria: clean kyria-left kyria-right
 
 .PHONY: kyria-left
 kyria-left:
