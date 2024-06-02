@@ -1,23 +1,23 @@
 .PHONY: keymap-images
-keymap-images: corne-keymap-image sofle-keymap-image kyria-keymap-image
+keymap-images: splitkb-aurora-corne-keymap-image splitkb-aurora-sofle-keymap-image kyria-v3-keymap-image
 
 .PHONY: clean
 clean:
 	rm -rf ~/Code/zmk/build/left/*
 	rm -rf ~/Code/zmk/build/right/*
 
-.PHONY: corne-keymap-image
-corne-keymap-image:
-	keymap --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/corne.keymap > assets/corne.keymap.yaml
-	keymap --config=keymap_drawer.config.yaml draw assets/corne.keymap.yaml --qmk-keyboard=crkbd/rev1 --qmk-layout=LAYOUT_split_3x6_3 > assets/corne.svg
+.PHONY: splitkb-aurora-corne-keymap-image
+splitkb-aurora-corne-keymap-image:
+	keymap --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/splitkb_aurora_corne.keymap > assets/splitkb_aurora_corne.keymap.yaml
+	keymap --config=keymap_drawer.config.yaml draw assets/splitkb_aurora_corne.keymap.yaml --qmk-keyboard=splitkb/aurora/corne/rev1 --qmk-layout=LAYOUT_split_3x6_3 > assets/splitkb_aurora_corne.svg
 
-.PHONY: sofle-keymap-image
-sofle-keymap-image:
+.PHONY: splitkb-aurora-sofle-keymap-image
+splitkb-aurora-sofle-keymap-image:
 	keymap --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/splitkb_aurora_sofle.keymap > assets/splitkb_aurora_sofle.keymap.yaml
 	keymap --config=keymap_drawer.config.yaml draw assets/splitkb_aurora_sofle.keymap.yaml --qmk-keyboard=splitkb/aurora/sofle_v2/rev1 > assets/splitkb_aurora_sofle.svg
 
-.PHONY: kyria-keymap-image
-kyria-keymap-image:
+.PHONY: kyria-v3-keymap-image
+kyria-v3-keymap-image:
 	keymap --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/kyria_rev3.keymap > assets/kyria_rev3.keymap.yaml
 	keymap --config=keymap_drawer.config.yaml draw assets/kyria_rev3.keymap.yaml --qmk-keyboard=splitkb/kyria/rev3 > assets/kyria_rev3.svg
 
@@ -27,26 +27,26 @@ zmk-local-setup:
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" zmkfirmware/zmk-build-arm:stable west update
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" zmkfirmware/zmk-build-arm:stable west zephyr-export
 
-.PHONY: corne
-corne: clean corne-left corne-right
+.PHONY: splitkb-aurora-corne
+splitkb-aurora-corne: clean splitkb-aurora-corne-left splitkb-aurora-corne-right
 
-.PHONY: corne-left
-corne-left:
-	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/left -- -DSHIELD=corne_left -DZMK_CONFIG="/my-zmk-config/config"
+.PHONY: splitkb-aurora-corne-left
+splitkb-aurora-corne-left:
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/left -- -DSHIELD=splitkb_aurora_corne_left -DZMK_CONFIG="/my-zmk-config/config"
 
-.PHONY: corne-right
-corne-right:
-	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=corne_right -DZMK_CONFIG="/my-zmk-config/config"
+.PHONY: splitkb-aurora-corne-right
+splitkb-aurora-corne-right:
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=splitkb_aurora_corne_right -DZMK_CONFIG="/my-zmk-config/config"
 
-.PHONY: sofle
-sofle: clean sofle-left sofle-right
+.PHONY: splitkb-aurora-sofle
+splitkb-aurora-sofle: clean splitkb-aurora-sofle-left splitkb-aurora-sofle-right
 
-.PHONY: sofle-left
-sofle-left:
+.PHONY: splitkb-aurora-sofle-left
+splitkb-aurora-sofle-left:
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/left -- -DSHIELD=splitkb_aurora_sofle_left -DZMK_CONFIG="/my-zmk-config/config"
 
-.PHONY: sofle-right
-sofle-right:
+.PHONY: splitkb-aurora-sofle-right
+splitkb-aurora-sofle-right:
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=splitkb_aurora_sofle_right -DZMK_CONFIG="/my-zmk-config/config"
 
 .PHONY: kyria
