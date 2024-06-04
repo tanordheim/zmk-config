@@ -430,6 +430,50 @@ parse_config:
       shifted: $$mdi:usb$$
       tap: $$mdi:toggle-switch$$
       hold: $$mdi:bluetooth$$
+    "&hml LGUI A":
+      shifted: ""
+      tap: A
+      hold: $$mdi:apple-keyboard-command$$
+    "&hml LALT R":
+      shifted: ""
+      tap: R
+      hold: $$mdi:apple-keyboard-option$$
+    "&hml LCTRL S":
+      shifted: ""
+      tap: S
+      hold: $$mdi:apple-keyboard-control$$
+    "&hml LSHIFT T":
+      shifted: ""
+      tap: T
+      hold: $$mdi:apple-keyboard-shift$$
+    "&hmr LSHIFT N":
+      shifted: ""
+      tap: N
+      hold: $$mdi:apple-keyboard-shift$$
+    "&hmr LCTRL E":
+      shifted: ""
+      tap: E
+      hold: $$mdi:apple-keyboard-control$$
+    "&hmr LALT I":
+      shifted: ""
+      tap: I
+      hold: $$mdi:apple-keyboard-option$$
+    "&hmr LGUI O":
+      shifted: ""
+      tap: O
+      hold: $$mdi:apple-keyboard-command$$
+    "&kp LG(V)":
+      shifted: ""
+      tap: $$mdi:content-paste$$
+    "&kp LG(C)":
+      shifted: ""
+      tap: $$mdi:content-copy$$
+    "&kp LG(X)":
+      shifted: ""
+      tap: $$mdi:content-cut$$
+    "&kp LG(Z)":
+      shifted: ""
+      tap: $$mdi:undo$$
 
     # Reset
     "&sys_reset":
@@ -437,6 +481,49 @@ parse_config:
       tap: $$mdi:backup-restore$$
     "&bootloader":
       tap: $$mdi:progress-download$$
+
+    # Screenshots
+    "&ss_to_file":
+      shifted: $$mdi:file-image$$
+      tap: $$mdi:monitor-screenshot$$
+    "&ss_to_clip":
+      shifted: $$mdi:clipboard$$
+      tap: $$mdi:monitor-screenshot$$
+
+    # Desktop management
+    "&kp LC(LA(H))": # move window desktop left
+      shifted: $$mdi:arrow-left$$
+      tap: $$mdi:application-outline$$
+    "&kp LC(LA(L))": # move window desktop right
+      shifted: $$mdi:arrow-right$$
+      tap: $$mdi:application-outline$$
+    "&kp LG(LA(H))": # focus desktop left
+      shifted: $$mdi:arrow-left$$
+      tap: $$mdi:monitor$$
+    "&hml LALT LG(LA(L))": # focus desktop right
+      shifted: $$mdi:arrow-right$$
+      tap: $$mdi:monitor$$
+      hold: $$mdi:apple-keyboard-option$$
+    "&kp LG(LALT)": # focus desktop fn
+      shifted: $$mdi:swap-horizontal$$
+      tap: $$mdi:monitor$$
+    "&kp LC(LALT)": # move window to desktop fn
+      shifted: $$mdi:swap-horizontal$$
+      tap: $$mdi:application-outline$$
+    "&kp LS(LC(LA(LG(R))))":
+      tap: $$mdi:monitor$$
+      shifted: $$mdi:backup-restore$$
+
+    # Norwegian characters
+    "&kp RA(Q)":
+      shifted: Œ
+      tap: œ
+    "&kp RA(O)":
+      shifted: Ø
+      tap: ø
+    "&kp RA(A)":
+      shifted: Å
+      tap: å
 
   # ZMK
   zmk_keycode_map:
@@ -488,11 +575,9 @@ parse_config:
     GT: ">"
     LBKT:
       tap: "["
-      shifted: "{"
     LBRC: "{"
     RBKT:
       tap: "]"
-      shifted: "}"
     RBRC: "}"
     GRAVE:
       tap: "`"
@@ -530,6 +615,44 @@ parse_config:
     N0:
       tap: 0
       shifted: ")"
+    KP_N1:
+      tap: 1
+    KP_N2:
+      tap: 2
+    KP_N3:
+      tap: 3
+    KP_N4:
+      tap: 4
+    KP_N5:
+      tap: 5
+    KP_N6:
+      tap: 6
+    KP_N7:
+      tap: 7
+    KP_N8:
+      tap: 8
+    KP_N9:
+      tap: 9
+    KP_N0:
+      tap: 0
+    KP_DIVIDE:
+      tap: "/"
+    KP_MINUS:
+      tap: "-"
+    KP_DOT:
+      tap: "."
+    KP_MULTIPLY:
+      tap: "*"
+    KP_EQUAL:
+      tap: "="
+    KP_PLUS:
+      tap: "+"
+    KP_COMMA:
+      tap: ","
+    KP_LPAR:
+      tap: "("
+    KP_RPAR:
+      tap: ")"
 
     # Modifiers
     LCTRL: $$mdi:apple-keyboard-control$$
@@ -628,23 +751,23 @@ parse_config:
       key:
         shifted: "_"
         hold: "-"
-    combo_equal:
-      key:
-        shifted: "+"
-        hold: "="
-    combo_backslash:
-      key:
-        shifted: "|"
-        hold: \
-    combo_lbkt:
-      key:
-        shifted: "{"
-        hold: "["
-    combo_rbkt:
-      key:
-        shifted: "}"
-        hold: "]"
-    combo_semicolon:
-      key:
-        shifted: ":"
-        hold: ";"
+  #   combo_equal:
+  #     key:
+  #       shifted: "+"
+  #       hold: "="
+  #   combo_backslash:
+  #     key:
+  #       shifted: "|"
+  #       hold: \
+  #   combo_lbkt:
+  #     key:
+  #       shifted: "{"
+  #       hold: "["
+  #   combo_rbkt:
+  #     key:
+  #       shifted: "}"
+  #       hold: "]"
+  #   combo_semicolon:
+  #     key:
+  #       shifted: ":"
+  #       hold: ";"
