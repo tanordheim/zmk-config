@@ -1,0 +1,20 @@
+/ {
+  macros {
+    ss_to_file: selection_screenshot_to_file {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings =
+      <&macro_press &kp LGUI &kp LSHIFT>,
+      <&macro_tap &kp N4>,
+      <&macro_release &kp LGUI &kp LSHIFT>;
+    };
+    ss_to_clip: selection_screenshot_to_clipboard {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings =
+      <&macro_press &kp LGUI &kp LCTRL &kp LSHIFT>,
+      <&macro_tap &kp N4>,
+      <&macro_release &kp LGUI &kp LCTRL &kp LSHIFT>;
+    };
+  };
+};

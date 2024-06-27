@@ -49,13 +49,13 @@ splitkb-aurora-sofle-left:
 splitkb-aurora-sofle-right:
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=splitkb_aurora_sofle_right -DZMK_CONFIG="/my-zmk-config/config"
 
-.PHONY: kyria
-kyria: clean kyria-left kyria-right
+.PHONY: kyria-v3
+kyria-v3: clean kyria-v3-left kyria-v3-right
 
-.PHONY: kyria-left
-kyria-left:
+.PHONY: kyria-v3-left
+kyria-v3-left:
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/left -- -DSHIELD=kyria_rev3_left -DZMK_CONFIG="/my-zmk-config/config"
 
-.PHONY: kyria-right
-kyria-right:
+.PHONY: kyria-v3-right
+kyria-v3-right:
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=kyria_rev3_right -DZMK_CONFIG="/my-zmk-config/config"
