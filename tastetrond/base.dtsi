@@ -1,5 +1,5 @@
 // layer names
-#define L_CMK 0
+#define L_QWERTY 0
 #define L_NAV 1
 #define L_NUM 2
 #define L_SYM 3

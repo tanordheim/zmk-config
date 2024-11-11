@@ -513,6 +513,10 @@ parse_config:
     "&kp LS(LC(LA(LG(R))))":
       tap: $$mdi:monitor$$
       shifted: $$mdi:backup-restore$$
+    "&kp LC(LA(LSHIFT))":
+      tap: "MEH"
+    "&kp LC(LA(LS(LGUI)))":
+      tap: "HYPR"
 
     # Norwegian characters
     "&kp RA(Q)":

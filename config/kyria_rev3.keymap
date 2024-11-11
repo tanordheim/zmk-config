@@ -4,23 +4,26 @@
 
 // map kyrias extra keys
 #define X_L_BM1 DSK_LEFT
-#define X_L_BM2 M_DSK_LEFT
-#define X_R_BM1 M_DSK_RIGHT
+#define X_L_BM2 ___
+#define X_R_BM1 ___
 #define X_R_BM2 DSK_RIGHT
-#define X_L_TL &mo L_SYS
-#define X_L_TR &trans
-#define X_R_TL &trans
-#define X_R_TR &mo L_NUM
+#define X_L_TL &kp LC(LA(LSHIFT))
+#define X_L_TR &mo L_UC
+#define X_R_TL &mo L_FN
+#define X_R_TR &kp LC(LA(LS(LGUI)))
 
 // enable rgb
 #define ENABLE_RGB_KEYS
+
+// enable encoders
+#define ENABLE_ENCODERS
 
 &led_strip {
   chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
 };
 
 &nice_view_spi {
-    cs-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
+    cs-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
 };
 
 #include "../tastetrond/tastetrond.keymap"

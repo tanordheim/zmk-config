@@ -8,18 +8,18 @@ clean:
 
 .PHONY: splitkb-aurora-corne-keymap-image
 splitkb-aurora-corne-keymap-image:
-	keymap --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/splitkb_aurora_corne.keymap > assets/splitkb_aurora_corne.keymap.yaml
-	keymap --config=keymap_drawer.config.yaml draw assets/splitkb_aurora_corne.keymap.yaml --qmk-keyboard=splitkb/aurora/corne/rev1 --qmk-layout=LAYOUT_split_3x6_3 > assets/splitkb_aurora_corne.svg
+	pipx run keymap-drawer --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/splitkb_aurora_corne.keymap > assets/splitkb_aurora_corne.keymap.yaml
+	pipx run keymap-drawer --config=keymap_drawer.config.yaml draw assets/splitkb_aurora_corne.keymap.yaml --qmk-keyboard=splitkb/aurora/corne/rev1 --qmk-layout=LAYOUT_split_3x6_3 > assets/splitkb_aurora_corne.svg
 
 .PHONY: splitkb-aurora-sofle-keymap-image
 splitkb-aurora-sofle-keymap-image:
-	keymap --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/splitkb_aurora_sofle.keymap > assets/splitkb_aurora_sofle.keymap.yaml
-	keymap --config=keymap_drawer.config.yaml draw assets/splitkb_aurora_sofle.keymap.yaml --qmk-keyboard=splitkb/aurora/sofle_v2/rev1 > assets/splitkb_aurora_sofle.svg
+	pipx run keymap-drawer --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/splitkb_aurora_sofle.keymap > assets/splitkb_aurora_sofle.keymap.yaml
+	pipx run keymap-drawer --config=keymap_drawer.config.yaml draw assets/splitkb_aurora_sofle.keymap.yaml --qmk-keyboard=splitkb/aurora/sofle_v2/rev1 > assets/splitkb_aurora_sofle.svg
 
 .PHONY: kyria-v3-keymap-image
 kyria-v3-keymap-image:
-	keymap --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/kyria_rev3.keymap > assets/kyria_rev3.keymap.yaml
-	keymap --config=keymap_drawer.config.yaml draw assets/kyria_rev3.keymap.yaml --qmk-keyboard=splitkb/kyria/rev3 > assets/kyria_rev3.svg
+	pipx run keymap-drawer --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/kyria_rev3.keymap > assets/kyria_rev3.keymap.yaml
+	pipx run keymap-drawer --config=keymap_drawer.config.yaml draw assets/kyria_rev3.keymap.yaml --qmk-keyboard=splitkb/kyria/rev3 > assets/kyria_rev3.svg
 
 .PHONY: zmk-local-setup
 zmk-local-setup:
