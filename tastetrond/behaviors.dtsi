@@ -80,5 +80,26 @@
       hold-trigger-key-positions = <KEYS_L THUMBS>;
       hold-trigger-on-release;
     };
+
+    no_ae: norwegian_ae {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&no_ae_lower>, <&no_ae_upper>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    no_oe: norwegian_oe {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&no_oe_lower>, <&no_oe_upper>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    no_aa: norwegian_aa {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&no_aa_lower>, <&no_aa_upper>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
   };
 };

@@ -519,13 +519,13 @@ parse_config:
       tap: "HYPR"
 
     # Norwegian characters
-    "&kp RA(Q)":
+    "&no_ae":
       shifted: Œ
       tap: œ
-    "&kp RA(O)":
+    "&no_oe":
       shifted: Ø
       tap: ø
-    "&kp RA(A)":
+    "&no_aa":
       shifted: Å
       tap: å
 

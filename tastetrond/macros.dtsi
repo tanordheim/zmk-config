@@ -1,3 +1,7 @@
+// linux unicode
+#define OS_UNICODE_LEAD &macro_tap &kp LS(LC(U))
+#define OS_UNICODE_TRAIL &macro_tap &kp SPACE
+
 / {
   macros {
     ss_to_file: selection_screenshot_to_file {
@@ -15,6 +19,48 @@
       <&macro_press &kp LGUI &kp LCTRL &kp LSHIFT>,
       <&macro_tap &kp N4>,
       <&macro_release &kp LGUI &kp LCTRL &kp LSHIFT>;
+    };
+    no_ae_lower: norwegian_ae_lowercase {
+      compatible = "zmk,behavior-macro";
+      wait-ms = <0>;
+      tap-ms = <0>;
+      #binding-cells = <0>;
+      bindings = <OS_UNICODE_LEAD>, <&macro_tap &kp N0 &kp N0 &kp E &kp N6>, <OS_UNICODE_TRAIL>;
+    };
+    no_ae_upper: norwegian_ae_uppercase {
+      compatible = "zmk,behavior-macro";
+      wait-ms = <0>;
+      tap-ms = <0>;
+      #binding-cells = <0>;
+      bindings = <OS_UNICODE_LEAD>, <&macro_tap &kp N0 &kp N0 &kp C &kp N6>, <OS_UNICODE_TRAIL>;
+    };
+    no_oe_lower: norwegian_oe_lowercase {
+      compatible = "zmk,behavior-macro";
+      wait-ms = <0>;
+      tap-ms = <0>;
+      #binding-cells = <0>;
+      bindings = <OS_UNICODE_LEAD>, <&macro_tap &kp N0 &kp N0 &kp F &kp N8>, <OS_UNICODE_TRAIL>;
+    };
+    no_oe_upper: norwegian_oe_uppercase {
+      compatible = "zmk,behavior-macro";
+      wait-ms = <0>;
+      tap-ms = <0>;
+      #binding-cells = <0>;
+      bindings = <OS_UNICODE_LEAD>, <&macro_tap &kp N0 &kp N0 &kp D &kp N8>, <OS_UNICODE_TRAIL>;
+    };
+    no_aa_lower: norwegian_aa_lowercase {
+      compatible = "zmk,behavior-macro";
+      wait-ms = <0>;
+      tap-ms = <0>;
+      #binding-cells = <0>;
+      bindings = <OS_UNICODE_LEAD>, <&macro_tap &kp N0 &kp N0 &kp E &kp N5>, <OS_UNICODE_TRAIL>;
+    };
+    no_aa_upper: norwegian_aa_uppercase {
+      compatible = "zmk,behavior-macro";
+      wait-ms = <0>;
+      tap-ms = <0>;
+      #binding-cells = <0>;
+      bindings = <OS_UNICODE_LEAD>, <&macro_tap &kp N0 &kp N0 &kp C &kp N5>, <OS_UNICODE_TRAIL>;
     };
   };
 };
