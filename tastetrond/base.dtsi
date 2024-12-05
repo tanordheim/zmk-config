@@ -1,11 +1,12 @@
 // layer names
 #define L_QWERTY 0
-#define L_NAV 1
-#define L_NUM 2
-#define L_SYM 3
-#define L_FN 4
-#define L_SYS 5
-#define L_UC 6
+#define L_COLEMAK 1
+#define L_NAV 2
+#define L_NUM 3
+#define L_SYM 4
+#define L_FN 5
+#define L_SYS 6
+#define L_UC 7
 
 // global settings
 #define QUICK_TAP_MS 175
