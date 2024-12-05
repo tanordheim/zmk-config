@@ -13,9 +13,9 @@ kyria-v3-keymap-image:
 
 .PHONY: zmk-local-setup
 zmk-local-setup:
-	docker run -w /zmk -v "${PWD}/../zmk:/zmk" zmkfirmware/zmk-build-arm:stable west init -l app/
-	docker run -w /zmk -v "${PWD}/../zmk:/zmk" zmkfirmware/zmk-build-arm:stable west update
-	docker run -w /zmk -v "${PWD}/../zmk:/zmk" zmkfirmware/zmk-build-arm:stable west zephyr-export
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" zmkfirmware/zmk-build-arm:stable sh -c "(git config --global safe.directory '*' && west init -l app/)"
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" zmkfirmware/zmk-build-arm:stable sh -c "(git config --global safe.directory '*' && west update)"
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" zmkfirmware/zmk-build-arm:stable sh -c "(git config --global safe.directory '*' && west zephyr-export)"
 
 .PHONY: kyria-v3
 kyria-v3: clean kyria-v3-left kyria-v3-right
