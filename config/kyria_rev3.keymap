@@ -22,8 +22,10 @@
   chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
 };
 
+#if defined(NICE_VIEW_SPI)
 &nice_view_spi {
     cs-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
 };
+#endif
 
 #include "../tastetrond/tastetrond.keymap"
