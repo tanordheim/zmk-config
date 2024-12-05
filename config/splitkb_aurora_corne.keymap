@@ -1,8 +1,0 @@
-// vim: ft=c
-
-#include "key-labels/42.h"
-
-// enable bluetooth
-#define ENABLE_BT_KEYS
-
-#include "../tastetrond/tastetrond.keymap"
