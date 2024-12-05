@@ -22,8 +22,11 @@ kyria-v3: clean kyria-v3-left kyria-v3-right
 
 .PHONY: kyria-v3-left
 kyria-v3-left:
-	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/left -- -DSHIELD=kyria_rev3_left -DZMK_CONFIG="/my-zmk-config/config"
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/left -- -DSHIELD=kyria_rev3_left -DZMK_CONFIG="/my-zmk-config/config" -DEXTRA_CONF_FILE=/my-zmk-config/config/kyria_rev3_choc.conf
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/left -- -DSHIELD=kyria_rev3_left -DZMK_CONFIG="/my-zmk-config/config" -DEXTRA_CONF_FILE=/my-zmk-config/config/kyria_rev3_mx.conf
 
 .PHONY: kyria-v3-right
 kyria-v3-right:
-	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=kyria_rev3_right -DZMK_CONFIG="/my-zmk-config/config"
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=kyria_rev3_right -DZMK_CONFIG="/my-zmk-config/config" -DEXTRA_CONF_FILE=/my-zmk-config/config/kyria_rev3_choc.conf
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=kyria_rev3_right -DZMK_CONFIG="/my-zmk-config/config" -DEXTRA_CONF_FILE=/my-zmk-config/config/kyria_rev3_mx.conf
+
