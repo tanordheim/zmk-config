@@ -15,6 +15,9 @@
 // enable rgb
 #define ENABLE_RGB_KEYS
 
+// enable bluetooth
+#define ENABLE_BT_KEYS
+
 // enable encoders
 #define ENABLE_ENCODERS
 
