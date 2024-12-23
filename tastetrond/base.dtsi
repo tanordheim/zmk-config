@@ -1,6 +1,6 @@
 // layer names
-#define L_QWERTY 0
-#define L_COLEMAK 1
+#define L_COLEMAK 0
+#define L_QWERTY 1
 #define L_NAV 2
 #define L_NUM 3
 #define L_SYM 4
