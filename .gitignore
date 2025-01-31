@@ -1,2 +1,9 @@
 .DS_Store
-assets/*.yaml
+/assets/*.yaml
+/.build/
+/.direnv/
+/.west/
+/zmk/
+/modules/
+/zephyr/
+/firmware/
