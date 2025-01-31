@@ -20,3 +20,11 @@ include:
     board: nice_nano_v2
     cmake-args: -DEXTRA_CONF_FILE=../../config/kyria_rev3_choc.conf
     artifact-name: zmk-kyria-rev3-choc-right
+  - keyboard: Auora Corne rev1 MX
+    shield: splitkb_aurora_corne_left nice_view_adapter nice_view
+    board: nice_nano_v2
+    artifact-name: zmk-aurora-corne-rev1-mx-left
+  - keyboard: Auora Corne rev1 MX
+    shield: splitkb_aurora_corne_right nice_view_adapter nice_view
+    board: nice_nano_v2
+    artifact-name: zmk-aurora-corne-rev1-mx-right

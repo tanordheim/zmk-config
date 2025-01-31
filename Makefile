@@ -1,5 +1,5 @@
 .PHONY: keymap-images
-keymap-images: kyria-v3-keymap-image
+keymap-images: kyria-v3-keymap-image aurora-corne-v1-keymap-image
 
 .PHONY: clean
 clean:
@@ -10,6 +10,11 @@ clean:
 kyria-v3-keymap-image:
 	nix-shell -p pipx --run "pipx run keymap-drawer --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/kyria_rev3.keymap" > assets/kyria_rev3.keymap.yaml
 	nix-shell -p pipx --run "pipx run keymap-drawer --config=keymap_drawer.config.yaml draw assets/kyria_rev3.keymap.yaml --qmk-keyboard=splitkb/kyria/rev3" > assets/kyria_rev3.svg
+
+.PHONY: aurora-corne-v1-keymap-image
+aurora-corne-v1-keymap-image:
+	nix-shell -p pipx --run "pipx run keymap-drawer --config=keymap_drawer.config.yaml parse --columns=10 --zmk-keymap=config/splitkb_aurora_corne.keymap" > assets/aurora_corne_v1.keymap.yaml
+	nix-shell -p pipx --run "pipx run keymap-drawer --config=keymap_drawer.config.yaml draw assets/aurora_corne_v1.keymap.yaml --qmk-keyboard=splitkb/aurora/corne/rev1" > assets/aurora_corne_v1.svg
 
 .PHONY: zmk-local-setup
 zmk-local-setup:
@@ -29,4 +34,17 @@ kyria-v3-left:
 kyria-v3-right:
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=kyria_rev3_right -DZMK_CONFIG="/my-zmk-config/config" -DEXTRA_CONF_FILE=/my-zmk-config/config/kyria_rev3_choc.conf
 	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=kyria_rev3_right -DZMK_CONFIG="/my-zmk-config/config" -DEXTRA_CONF_FILE=/my-zmk-config/config/kyria_rev3_mx.conf
+
+.PHONY: aurora-corne-v1
+aurora-corne-v1: clean aurora-corne-v1-left aurora-corne-v1-right
+
+.PHONY: aurora-corne-v1-left
+aurora-corne-v1-left:
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/left -- -DSHIELD=splitkb_aurora_corne_left -DZMK_CONFIG="/my-zmk-config/config"
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/left -- -DSHIELD=splitkb_aurora_corne_left -DZMK_CONFIG="/my-zmk-config/config"
+
+.PHONY: aurora-corne-v1-right
+aurora-corne-v1-right:
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=splitkb_aurora_corne_left -DZMK_CONFIG="/my-zmk-config/config"
+	docker run -w /zmk -v "${PWD}/../zmk:/zmk" -v "${PWD}:/my-zmk-config" zmkfirmware/zmk-build-arm:stable west build -s app -b nice_nano_v2 -d build/right -- -DSHIELD=splitkb_aurora_corne_left -DZMK_CONFIG="/my-zmk-config/config"
 
