@@ -659,15 +659,15 @@ path.combo {
 <a href="#fn">
 <text x="0" y="0" class="key tap layer-activator">fn</text>
 </a></g>
-<g transform="translate(873, 345) rotate(-30.0)" class="key enter keypos-46">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-13" y="-13" height="26" width="26.0" class="key enter tap glyph mdi:keyboard-return"/>
-</g>
-<g transform="translate(954, 311) rotate(-15.0)" class="key keypos-47">
+<g transform="translate(873, 345) rotate(-30.0)" class="key keypos-46">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <a href="#sym">
 <text x="0" y="0" class="key tap layer-activator">sym</text>
 </a></g>
+<g transform="translate(954, 311) rotate(-15.0)" class="key enter keypos-47">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key enter"/>
+<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-13" y="-13" height="26" width="26.0" class="key enter tap glyph mdi:keyboard-return"/>
+</g>
 <g transform="translate(1040, 300)" class="key keypos-48">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <a href="#num">
@@ -698,6 +698,11 @@ path.combo {
 <g class="combo combopos-4">
 <rect rx="4" ry="4" x="1108" y="198" width="24" height="24" class="combo"/>
 <text x="1120" y="210" class="combo tap">)</text>
+</g>
+<g class="combo combopos-5">
+<rect rx="4" ry="4" x="988" y="168" width="24" height="24" class="combo"/>
+<text x="1000" y="188" class="combo hold">-</text>
+<text x="1000" y="172" class="combo shifted">_</text>
 </g>
 </g>
 </g>
@@ -926,6 +931,11 @@ path.combo {
 <rect rx="4" ry="4" x="1108" y="198" width="24" height="24" class="combo"/>
 <text x="1120" y="210" class="combo tap">)</text>
 </g>
+<g class="combo combopos-4">
+<rect rx="4" ry="4" x="988" y="168" width="24" height="24" class="combo"/>
+<text x="1000" y="188" class="combo hold">-</text>
+<text x="1000" y="172" class="combo shifted">_</text>
+</g>
 </g>
 </g>
 <g transform="translate(0, 909)" class="layer-num">
@@ -1153,6 +1163,11 @@ path.combo {
 <rect rx="4" ry="4" x="1108" y="198" width="24" height="24" class="combo"/>
 <text x="1120" y="210" class="combo tap">)</text>
 </g>
+<g class="combo combopos-4">
+<rect rx="4" ry="4" x="988" y="168" width="24" height="24" class="combo"/>
+<text x="1000" y="188" class="combo hold">-</text>
+<text x="1000" y="172" class="combo shifted">_</text>
+</g>
 </g>
 </g>
 <g transform="translate(0, 1363)" class="layer-sym">
@@ -1351,12 +1366,12 @@ path.combo {
 <a href="#fn">
 <text x="0" y="0" class="key tap layer-activator">fn</text>
 </a></g>
-<g transform="translate(873, 345) rotate(-30.0)" class="key trans keypos-46">
+<g transform="translate(873, 345) rotate(-30.0)" class="key held keypos-46">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held"/>
+</g>
+<g transform="translate(954, 311) rotate(-15.0)" class="key trans keypos-47">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
-</g>
-<g transform="translate(954, 311) rotate(-15.0)" class="key held keypos-47">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held"/>
 </g>
 <g transform="translate(1040, 300)" class="key trans keypos-48">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
@@ -1570,12 +1585,12 @@ path.combo {
 <a href="#fn">
 <text x="0" y="0" class="key held tap layer-activator">fn</text>
 </a></g>
-<g transform="translate(873, 345) rotate(-30.0)" class="key trans keypos-46">
+<g transform="translate(873, 345) rotate(-30.0)" class="key held alternate keypos-46">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held alternate"/>
+</g>
+<g transform="translate(954, 311) rotate(-15.0)" class="key trans keypos-47">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
-</g>
-<g transform="translate(954, 311) rotate(-15.0)" class="key held alternate keypos-47">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held alternate"/>
 </g>
 <g transform="translate(1040, 300)" class="key held alternate keypos-48">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held alternate"/>
@@ -1800,12 +1815,12 @@ path.combo {
 <a href="#fn">
 <text x="0" y="0" class="key held tap layer-activator">fn</text>
 </a></g>
-<g transform="translate(873, 345) rotate(-30.0)" class="key trans keypos-46">
+<g transform="translate(873, 345) rotate(-30.0)" class="key held keypos-46">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held"/>
+</g>
+<g transform="translate(954, 311) rotate(-15.0)" class="key trans keypos-47">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
-</g>
-<g transform="translate(954, 311) rotate(-15.0)" class="key held keypos-47">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held"/>
 </g>
 <g transform="translate(1040, 300)" class="key held keypos-48">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held"/>
@@ -2010,12 +2025,12 @@ path.combo {
 <a href="#fn">
 <text x="0" y="0" class="key held alternate tap layer-activator">fn</text>
 </a></g>
-<g transform="translate(873, 345) rotate(-30.0)" class="key trans keypos-46">
+<g transform="translate(873, 345) rotate(-30.0)" class="key held alternate keypos-46">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held alternate"/>
+</g>
+<g transform="translate(954, 311) rotate(-15.0)" class="key trans keypos-47">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
-</g>
-<g transform="translate(954, 311) rotate(-15.0)" class="key held alternate keypos-47">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held alternate"/>
 </g>
 <g transform="translate(1040, 300)" class="key held alternate keypos-48">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held alternate"/>
