@@ -67,7 +67,21 @@
     morph_rpar_gt: right_par_gt {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp LPAR>, <&kp GT>;
+      bindings = <&kp RPAR>, <&kp GT>;
+      mods = <(MOD_LSFT)>;
+    };
+
+    morph_lbrc_lbkt: left_brace_left_bracket {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp LBRC>, <&kp LBKT>;
+      mods = <(MOD_LSFT)>;
+    };
+
+    morph_rbrc_rbkt: right_brace_right_bracket {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp RBRC>, <&kp RBKT>;
       mods = <(MOD_LSFT)>;
     };
 
