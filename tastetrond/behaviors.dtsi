@@ -57,6 +57,20 @@
       mods = <(MOD_LSFT)>;
     };
 
+    morph_lbrc_lbrk: left_brace_left_bracket {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp LBRC>, <&kp LBKT>;
+      mods = <(MOD_LSFT)>;
+    };
+
+    morph_rbrc_rbrk: right_brace_right_bracket {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp RBRC>, <&kp RBKT>;
+      mods = <(MOD_LSFT)>;
+    };
+
     hml: homerow_mods_left {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
