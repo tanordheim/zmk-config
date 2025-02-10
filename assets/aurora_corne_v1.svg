@@ -679,6 +679,21 @@ path.combo {
 <text x="880" y="173" class="combo hold">-</text>
 <text x="880" y="157" class="combo shifted">_</text>
 </g>
+<g class="combo combopos-8">
+<rect rx="4" ry="4" x="1028" y="128" width="24" height="24" class="combo"/>
+<text x="1040" y="140" class="combo tap">ø</text>
+<text x="1040" y="132" class="combo shifted">Ø</text>
+</g>
+<g class="combo combopos-9">
+<rect rx="4" ry="4" x="1028" y="48" width="24" height="24" class="combo"/>
+<text x="1040" y="60" class="combo tap">œ</text>
+<text x="1040" y="52" class="combo shifted">Œ</text>
+</g>
+<g class="combo combopos-10">
+<rect rx="4" ry="4" x="1108" y="58" width="24" height="24" class="combo"/>
+<text x="1120" y="70" class="combo tap">å</text>
+<text x="1120" y="62" class="combo shifted">Å</text>
+</g>
 </g>
 </g>
 <g transform="translate(0, 392)" class="layer-nav">
