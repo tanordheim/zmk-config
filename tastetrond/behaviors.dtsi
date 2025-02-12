@@ -71,17 +71,17 @@
       mods = <(MOD_LSFT)>;
     };
 
-    morph_lbrc_lbkt: left_brace_left_bracket {
+    morph_lbkt_lbrc: left_bracket_left_brace {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp LBRC>, <&kp LBKT>;
+      bindings = <&kp LBKT>, <&kp LBRC>;
       mods = <(MOD_LSFT)>;
     };
 
-    morph_rbrc_rbkt: right_brace_right_bracket {
+    morph_rbkt_rbrc: right_bracket_right_brace {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp RBRC>, <&kp RBKT>;
+      bindings = <&kp RBKT>, <&kp RBRC>;
       mods = <(MOD_LSFT)>;
     };
 
