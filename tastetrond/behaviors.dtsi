@@ -15,73 +15,45 @@
 
 / {
   behaviors {
-    morph_comma: comma_semi {
+    morph_semi: semi_colon {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp COMMA>, <&morph_comma_inner>;
+      bindings = <&kp NO_SCLN>, <&kp NO_COLN>;
       mods = <(MOD_LSFT)>;
     };
 
-    morph_comma_inner: comma_semi_lt_inner {
+    morph_comma: comma_lt {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp SEMI>, <&kp LT>;
-      mods = <(MOD_LCTL)>;
-    };
-
-    morph_dot: dot_colon {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp DOT>, <&morph_dot_inner>;
+      bindings = <&kp COMMA>, <&kp NO_LT>;
       mods = <(MOD_LSFT)>;
     };
 
-    morph_dot_inner: dot_colon_gt_inner {
+    morph_dot: dot_gt {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp COLON>, <&kp GT>;
-      mods = <(MOD_LCTL)>;
+      bindings = <&kp DOT>, <&kp NO_GT>;
+      mods = <(MOD_LSFT)>;
     };
 
     morph_qexcl: question_exclamation_mark {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp QMARK>, <&kp EXCL>;
+      bindings = <&kp NO_QMARK>, <&kp NO_EXCL>;
       mods = <(MOD_LSFT)>;
     };
 
     morph_quot: double_quote_quote {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp DQT>, <&kp SQT>;
+      bindings = <&kp NO_DQT>, <&kp NO_SQT>;
       mods = <(MOD_LSFT)>;
     };
 
-    morph_lpar_lt: left_par_lt {
+    morph_slhpipe: slash_pipe {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp LPAR>, <&kp LT>;
-      mods = <(MOD_LSFT)>;
-    };
-
-    morph_rpar_gt: right_par_gt {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp RPAR>, <&kp GT>;
-      mods = <(MOD_LSFT)>;
-    };
-
-    morph_lbkt_lbrc: left_bracket_left_brace {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp LBKT>, <&kp LBRC>;
-      mods = <(MOD_LSFT)>;
-    };
-
-    morph_rbkt_rbrc: right_bracket_right_brace {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp RBKT>, <&kp RBRC>;
+      bindings = <&kp NO_FSLH>, <&kp NO_PIPE>;
       mods = <(MOD_LSFT)>;
     };
 
@@ -107,27 +79,6 @@
       bindings = <&kp>, <&kp>;
       hold-trigger-key-positions = <KEYS_L THUMBS>;
       hold-trigger-on-release;
-    };
-
-    no_ae: norwegian_ae {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&no_ae_lower>, <&no_ae_upper>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    no_oe: norwegian_oe {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&no_oe_lower>, <&no_oe_upper>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    no_aa: norwegian_aa {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&no_aa_lower>, <&no_aa_upper>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
 };

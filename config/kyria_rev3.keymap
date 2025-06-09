@@ -3,14 +3,14 @@
 #include "key-labels/50.h"
 
 // map kyrias extra keys
-#define X_L_BM1 DSK_LEFT
+#define X_L_BM1 ___
 #define X_L_BM2 ___
 #define X_R_BM1 ___
-#define X_R_BM2 DSK_RIGHT
-#define X_L_TL &kp LC(LA(LSHIFT))
-#define X_L_TR &mo L_UC
+#define X_R_BM2 ___
+#define X_L_TL &kp LGUI
+#define X_L_TR &mo L_MEDIA
 #define X_R_TL &mo L_FN
-#define X_R_TR &kp LC(LA(LS(LGUI)))
+#define X_R_TR &kp LS(LC(LALT))
 
 // enable rgb
 #define ENABLE_RGB_KEYS
@@ -22,13 +22,11 @@
 #define ENABLE_ENCODERS
 
 &led_strip {
-  chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
+  chain-length = <31>; // bith per-key and underglow LEDs
 };
 
-#if defined(NICE_VIEW_SPI)
 &nice_view_spi {
-    cs-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
+    cs-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>; // gpio1 is pin P1.01 (101) on the nice!nano v2
 };
-#endif
 
 #include "../tastetrond/tastetrond.keymap"

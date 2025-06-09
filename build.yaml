@@ -1,30 +1,18 @@
 ---
 include:
-  - keyboard: Kyria rev3 MX
+  - keyboard: Kyria rev3
     shield: kyria_rev3_left nice_view_adapter nice_view
     board: nice_nano_v2
-    cmakeargs: -DEXTRA_CONF_FILE=../../config/kyria_rev3_mx.conf
-    artifact-name: zmk-kyria-rev3-mx-left
-  - keyboard: Kyria rev3 MX
+    artifact-name: zmk-kyria-rev3-left
+  - keyboard: Kyria rev3
     shield: kyria_rev3_right nice_view_adapter nice_view
     board: nice_nano_v2
-    cmake-args: -DEXTRA_CONF_FILE=../../config/kyria_rev3_mx.conf
-    artifact-name: zmk-kyria-rev3-mx-right
-  - keyboard: Kyria rev3 choc
-    shield: kyria_rev3_left
-    board: nice_nano_v2
-    cmake-args: -DEXTRA_CONF_FILE=../../config/kyria_rev3_choc.conf
-    artifact-name: zmk-kyria-rev3-choc-left
-  - keyboard: Kyria rev3 choc
-    shield: kyria_rev3_right
-    board: nice_nano_v2
-    cmake-args: -DEXTRA_CONF_FILE=../../config/kyria_rev3_choc.conf
-    artifact-name: zmk-kyria-rev3-choc-right
-  - keyboard: Auora Corne rev1 MX
+    artifact-name: zmk-kyria-rev3-right
+  - keyboard: Auora Corne rev1
     shield: splitkb_aurora_corne_left nice_view_adapter nice_view
     board: nice_nano_v2
-    artifact-name: zmk-aurora-corne-rev1-mx-left
-  - keyboard: Auora Corne rev1 MX
+    artifact-name: zmk-aurora-corne-rev1-left
+  - keyboard: Auora Corne rev1
     shield: splitkb_aurora_corne_right nice_view_adapter nice_view
     board: nice_nano_v2
-    artifact-name: zmk-aurora-corne-rev1-mx-right
+    artifact-name: zmk-aurora-corne-rev1-right
