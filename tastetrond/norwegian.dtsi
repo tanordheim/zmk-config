@@ -27,7 +27,7 @@
 #define NO_DOLLAR   RA(N4)         // $
 #define NO_EQUAL    LS(N0)         // =
 #define NO_PLUS     MINUS          // +
-#define NO_TILDE    RA(RBRC)       // ~ (dead key)
+#define NO_TILDE    RA(RBKT)       // ~ (dead key)
 #define NO_AT       RA(N2)         // @
 #define NO_UNDER    LS(SLASH)      // _
 #define NO_MINUS    SLASH          // -
