@@ -3,32 +3,32 @@
 #define NO_AA       LBKT           // å
 #define NO_QMARK    LS(MINUS)      // ?
 #define NO_EXCL     LS(N1)         // !
-#define NO_LT       NUBS           // <
-#define NO_GT       LS(NUBS)       // >
-#define NO_SQT      NUHS           // '
+#define NO_LT       GRAVE          // <
+#define NO_GT       LS(GRAVE)      // >
+#define NO_SQT      NUBS           // '
 #define NO_DQT      LS(N2)         // "
 #define NO_COLN     LS(DOT)        // :
 #define NO_SCLN     LS(COMMA)      // ;
 #define NO_FSLH     LS(N7)         // /
-#define NO_PIPE     GRAVE          // |
+#define NO_PIPE     RA(N7)         // |
 #define NO_LPAR     LS(N8)         // (
 #define NO_RPAR     LS(N9)         // )
-#define NO_LBRC     RA(N7)         // {
-#define NO_RBRC     RA(N0)         // }
+#define NO_LBRC     LS(RA(N8))     // {
+#define NO_RBRC     LS(RA(N9))     // }
 #define NO_LBRK     RA(N8)         // [
 #define NO_RBRK     RA(N9)         // ]
 #define NO_GRAVE    LS(EQUAL)      // ` (dead key)
-#define NO_BSLH     EQUAL          // (backslash)
+#define NO_BSLH     LS(RA(N7))     // (backslash)
 #define NO_HASH     LS(N3)         // #
 #define NO_STAR     LS(NUHS)       // *
 #define NO_PRCNT    LS(N5)         // %
 #define NO_CARET    LS(RBRC)       // ^ (dead key)
 #define NO_AMPS     LS(N6)         // &
-#define NO_DOLLAR   RA(N4)         // $
+#define NO_DOLLAR   DOLLAR         // $
 #define NO_EQUAL    LS(N0)         // =
 #define NO_PLUS     MINUS          // +
 #define NO_TILDE    RA(RBKT)       // ~ (dead key)
-#define NO_AT       RA(N2)         // @
+#define NO_AT       NUHS           // @
 #define NO_UNDER    LS(SLASH)      // _
 #define NO_MINUS    SLASH          // -
 #define NO_SECT     LS(GRAVE)      // §

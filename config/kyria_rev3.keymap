@@ -7,7 +7,7 @@
 #define X_L_BM2 ___
 #define X_R_BM1 ___
 #define X_R_BM2 ___
-#define X_L_TL &kp LGUI
+#define X_L_TL &kp LALT
 #define X_L_TR &mo L_MEDIA
 #define X_R_TL &mo L_FN
 #define X_R_TR &kp LS(LC(LALT))
